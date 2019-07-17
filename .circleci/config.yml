@@ -15,4 +15,4 @@ workflows:
   aws-cli:
     jobs:
       - aws-cli:
-          context: aws
+          run: aws sts get-caller-identity
