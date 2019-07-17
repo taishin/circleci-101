@@ -9,10 +9,10 @@ jobs:
     steps:
       - checkout
       - aws-cli/install
-      
+      - run: aws sts get-caller-identity
 workflows:
   version: 2
   aws-cli:
     jobs:
-      - aws-cli:
-          run: aws sts get-caller-identity
+      aws-cli
+
