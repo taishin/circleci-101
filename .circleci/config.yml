@@ -3,8 +3,7 @@ version: 2.1
 orbs:
   aws-cli: circleci/aws-cli@0.1.13
   
-workflows:
-  "test aws-cli":
-    steps:
-      - checkout
-      - run: aws sts get-caller-identity
+
+steps:
+  - checkout
+  - run: aws sts get-caller-identity
