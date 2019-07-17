@@ -1,9 +1,10 @@
 version: 2.1
 
 orbs:
-  hello: circleci/hello-build@0.0.7
+  aws-cli: circleci/aws-cli@0.1.13
   
 workflows:
-  "Hello Workflow":
-    jobs:
-      - hello/hello-build
+  "test aws-cli":
+    steps:
+      - checkout
+      - run: aws sts get-caller-identity
